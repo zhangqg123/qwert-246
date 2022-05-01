@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.qwert.point.mapper.QwertPointTargetMapper">
+    <resultMap id="QwertPointTarget" type="org.jeecg.modules.qwert.point.entity.QwertPointTarget">
+        <!-- result属性映射非匹配字段 -->
+    </resultMap>
+    <select id="queryQptList" parameterType="Object"  resultMap="QwertPointTarget">
+        SELECT * FROM qwert_point_target where dev_no=#{dev_no} order by instruct,address
+    </select>
+    <select id="queryJztList5" parameterType="Object"  resultMap="QwertPointTarget">
+        SELECT * FROM qwert_point_target where dev_no=#{dev_no} and if_get!="unuse" order by instruct,address
+    </select>
+
+</mapper>

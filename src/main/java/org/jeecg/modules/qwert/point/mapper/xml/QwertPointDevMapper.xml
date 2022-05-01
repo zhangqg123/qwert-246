@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.qwert.point.mapper.QwertPointDevMapper">
+	<resultMap id="QwertPointDev" type="org.jeecg.modules.qwert.point.entity.QwertPointDev">
+		<!-- result属性映射非匹配字段 -->
+	</resultMap>    <select id="queryJzdList2" parameterType="Object"  resultMap="QwertPointDev">
+		SELECT * FROM qwert_point_dev where status="0" and dev_cat =#{dev_cat} order by dev_no
+	</select>
+
+</mapper>
